@@ -50,6 +50,7 @@ public class TestController {
     /**
      * 发起新的会话
      * 清空对话历史记录并重新初始化
+     * @return String
      */
     @GetMapping("/new-session")
     public String startNewSession() {
