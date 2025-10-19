@@ -1,2 +1,0 @@
-# springAI
-springai-exercise
