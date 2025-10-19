@@ -46,4 +46,15 @@ public class TestController {
         }
         return chatResponse;
     }
+
+    /**
+     * 发起新的会话
+     * 清空对话历史记录并重新初始化
+     */
+    @GetMapping("/new-session")
+    public String startNewSession() {
+        chatHistory.clear();
+        init(); // 重新初始化对话历史记录
+        return "New session started.";
+    }
 }
