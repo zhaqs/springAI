@@ -9,6 +9,7 @@ import org.springframework.ai.chat.model.ChatResponse;
 import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.openai.OpenAiChatModel;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -56,5 +57,10 @@ public class TestController {
         chatHistory.clear();
         init(); // 重新初始化对话历史记录
         return "New session started.";
+    }
+
+    @GetMapping("/gitHub")
+    public String testGitHub(){
+        return "hello GitHub";
     }
 }
